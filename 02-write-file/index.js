@@ -9,23 +9,6 @@ const messageBye = 'Спасибо, удачного дня!';
 const fileName = 'text.txt';
 stdout.write(messageHello);
 
-// currentFile = path.join(__dirname, 'text.txt');
-
-// const stream = fs.createReadStream(currentFile, 'utf-8');
-// let data = '';
-// stream.on('data', (chunk) => (data += chunk));
-// stream.on('end', () => console.log(data));
-// stream.on('error', (error) => console.log('Error', error.message));
-// stdin.on('data', (data) => {
-//     const dataStringified = data.toString();
-//     console.log(dataStringified);
-
-//     if (dataStringified.toLowerCase() == 'exit') {
-//         process.exit();
-//     }
-//     stdout.write(dataStringified);
-// });
-
 const ws = createWriteStream(join(__dirname, fileName)).on('error', (err) =>
     console.log(err)
 );
