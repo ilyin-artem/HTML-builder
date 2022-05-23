@@ -13,7 +13,7 @@ async function mergeStyles(source, destBundle) {
 
         for (const element of sourceElements) {
             if (element.isFile() && path.extname(element.name) === '.css') {
-                const cssPath = path.join(sourcePath, element.name);
+                const cssPath = path.join(source, element.name);
 
                 // cssData += cssData === '' ? '' : '\n';
                 cssData += (await fs.readFile(cssPath, 'utf8')) + '\n';
